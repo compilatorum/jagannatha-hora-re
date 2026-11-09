@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C++ Build artifacts
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+build/
+bin/
+
+# Temporary files
+*.swp
+*~
+.DS_Store
