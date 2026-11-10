@@ -1,0 +1,26 @@
+{
+  "provenance": "Golden test dataset for planetary positions and Ayanamsa shift",
+  "epoch": "J2000.0",
+  "cases": [
+    {
+      "case_id": "POS-CASE-01",
+      "description": "Standard J2000.0 Epoch Ayanamsa (2000-01-01 12:00 UT)",
+      "jd_ut": 2451545.0,
+      "expected_lahiri_ayanamsa": 23.85709166666667,
+      "planets": {
+        "Sun": {
+          "sayana_lon": 280.4606,
+          "expected_nirayana_lon": 256.60350833333335,
+          "expected_rasi": 8,
+          "expected_nakshatra": 19
+        },
+        "Spica": {
+          "sayana_lon": 203.85709166666667,
+          "expected_nirayana_lon": 180.0,
+          "expected_rasi": 6,
+          "expected_nakshatra": 13
+        }
+      }
+    }
+  ]
+}

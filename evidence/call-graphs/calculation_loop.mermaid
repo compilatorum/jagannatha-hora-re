@@ -1,0 +1,17 @@
+flowchart TD
+    classDef start fill:#89b4fa,stroke:#b4befe,stroke-width:2px,color:#11111b;
+    classDef step fill:#313244,stroke:#45475a,stroke-width:1px,color:#cdd6f4;
+    classDef crit fill:#fab387,stroke:#f9e2af,stroke-width:2px,color:#11111b;
+    classDef render fill:#a6e3a1,stroke:#94e2d5,stroke-width:2px,color:#11111b;
+
+    S([User Input: TDataEntryForm]):::start --> VCL[TFormMain::btnCalculateClick]:::step
+    VCL --> ORCH[TFormMain::CalculateHoroscope]:::step
+    ORCH --> S1[Stage 1: swe_julday UT & LST]:::step
+    S1 --> S2[Stage 2: sub.calc_ayanamsa_lahiri]:::crit
+    S2 --> S3[Stage 3: sub.calc_all_grahas Loop 0..11]:::step
+    S3 --> S4[Stage 4: swe_houses & Sripati Sandhis]:::step
+    S4 --> S5[Stage 5: Shodashavarga Projection Matrix D-1..D-60]:::step
+    S5 --> S6[Stage 6: Shadbala Dignities Evaluation]:::step
+    S6 --> S7[Stage 7: sub.init_vimshottari_engine]:::crit
+    S7 --> S8[Stage 8: TCanvas Invalidate & DrawCharts]:::render
+    S8 --> E([Render Complete / Idle]):::start

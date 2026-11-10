@@ -1,0 +1,13 @@
+{
+  "provenance": "Golden test dataset for house cusps and Sripati Bhava Sandhi evaluation",
+  "cases": [
+    {
+      "case_id": "BHAVA-CASE-01",
+      "description": "Equinoctial Ascendant at 0.0 deg Mesha, Equal 30-deg house cusp spacing",
+      "ascendant_lon": 0.0,
+      "house_system": "Equal",
+      "expected_cusps": [0.0, 30.0, 60.0, 90.0, 120.0, 150.0, 180.0, 210.0, 240.0, 270.0, 300.0, 330.0],
+      "expected_sandhis": [15.0, 45.0, 75.0, 105.0, 135.0, 165.0, 195.0, 225.0, 255.0, 285.0, 315.0, 345.0]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "provenance": "Golden test cases for Vimshottari Dasha State Machine verified against Parashara Hora Shastra",
+  "conventions": {
+    "system": "Vimshottari",
+    "total_years": 120.0,
+    "nakshatra_span_deg": 13.333333333333334,
+    "default_days_per_year": 365.2425
+  },
+  "cases": [
+    {
+      "case_id": "VIM-CASE-01",
+      "description": "Moon at 0.0 deg (Exact start of Ashwini Nakshatra, Ketu full 7 years)",
+      "moon_nirayana_lon": 0.0,
+      "expected_nakshatra_idx": 0,
+      "expected_nakshatra_name": "Ashwini",
+      "expected_lord_idx": 0,
+      "expected_lord_name": "Ketu",
+      "expected_balance_fraction": 1.0,
+      "expected_balance_years": 7.0
+    },
+    {
+      "case_id": "VIM-CASE-02",
+      "description": "Moon at 20.0 deg (Exact middle of Bharani Nakshatra, Venus balance 50%)",
+      "moon_nirayana_lon": 20.0,
+      "expected_nakshatra_idx": 1,
+      "expected_nakshatra_name": "Bharani",
+      "expected_lord_idx": 1,
+      "expected_lord_name": "Venus",
+      "expected_balance_fraction": 0.5,
+      "expected_balance_years": 10.0
+    },
+    {
+      "case_id": "VIM-CASE-03",
+      "description": "Moon at 129.54 deg (Magha Nakshatra, Ketu Lord)",
+      "moon_nirayana_lon": 129.54,
+      "expected_nakshatra_idx": 9,
+      "expected_nakshatra_name": "Magha",
+      "expected_lord_idx": 0,
+      "expected_lord_name": "Ketu",
+      "expected_balance_fraction": 0.2845,
+      "expected_balance_years": 1.9915
+    },
+    {
+      "case_id": "VIM-CASE-04",
+      "description": "Moon at 359.999 deg (Revati Nakshatra boundary, Mercury Lord)",
+      "moon_nirayana_lon": 359.999,
+      "expected_nakshatra_idx": 26,
+      "expected_nakshatra_name": "Revati",
+      "expected_lord_idx": 8,
+      "expected_lord_name": "Mercury",
+      "expected_balance_fraction": 0.000075,
+      "expected_balance_years": 0.001275
+    }
+  ]
+}
